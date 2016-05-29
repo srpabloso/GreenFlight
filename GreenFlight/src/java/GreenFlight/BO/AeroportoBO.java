@@ -10,5 +10,9 @@ package GreenFlight.BO;
  * @author 37761832846
  */
 public class AeroportoBO {
+
+    protected String pablo;
+
     
 }
+
