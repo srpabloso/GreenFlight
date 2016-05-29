@@ -2,23 +2,40 @@
 package GreenFlight.VO;
 
 import java.util.Date;
-import javax.inject.Named;
-import javax.enterprise.context.Dependent;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Named(value = "clienteVO")
-@Dependent
+@Entity
+@Table(name = "Cliente")
 public class ClienteVO {
 
+    @Id
+    @GeneratedValue
+    private Integer _Id;
+    @Column
     private String _CPF;
+    @Column
     private String _Nome;
+    @Column
     private Date _DataNascimento;
+    @Column
     private String _Login;
-        
-    public ClienteVO(String cpf, String nome, Date dataNascimento, String login) {
+    @Column
+    private String _Senha;
+    
+    public ClienteVO()
+    {
+    }
+    
+    public ClienteVO(String cpf, String nome, Date dataNascimento, String login, String senha) {
         setCPF(cpf);
         setNome(nome);
         setDataNascimento(dataNascimento);
         setLogin(login);
+        setSenha(senha);
     }
 
     /**
@@ -75,6 +92,27 @@ public class ClienteVO {
      */
     public void setLogin(String _Login) {
         this._Login = _Login;
+    }
+
+    /**
+     * @return the _Id
+     */
+    public Integer getId() {
+        return _Id;
+    }
+
+    /**
+     * @param _Id the _Id to set
+     */
+    public void setId(Integer _Id) {
+        this._Id = _Id;
+    }
+
+    /**
+     * @param _Senha the _Senha to set
+     */
+    public void setSenha(String _Senha) {
+        this._Senha = _Senha;
     }
 
 }

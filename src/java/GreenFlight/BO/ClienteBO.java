@@ -5,10 +5,15 @@
  */
 package GreenFlight.BO;
 
-/**
- *
- * @author 37761832846
- */
+import javax.enterprise.context.Dependent;
+import javax.inject.Named;
+
+@Named(value = "clienteBO")
+@Dependent
 public class ClienteBO {
     String Lucas;
+    
+    public String texto(){
+        return "ok";
+    }
 }

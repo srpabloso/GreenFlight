@@ -40,17 +40,17 @@ public class Cliente extends AbstractController {
     
     public void Cadastrar(String nome, String login, String senha, Date DataNascimento, String CPF)
     {
-        ClienteVO cliente = new ClienteVO(CPF, nome, DataNascimento, login);
+        ClienteVO cliente = new ClienteVO(CPF, nome, DataNascimento, login, senha);
         ClienteDAO dao = new ClienteDAO();
-        dao.Cadastrar(cliente, senha);
-        
+        dao.cadastrar(cliente);
     }
+    
+    // Não está funcionando ainda, vou arrumar.
+    public String Buscar(String cpf)
+    {
+        ClienteDAO dao = new ClienteDAO();
+        ClienteVO cliente = dao.buscar("31545283850");
         
-    
+        return cliente.getCPF();
+    }
 }
-    
-   
-    
-    
-    
-
