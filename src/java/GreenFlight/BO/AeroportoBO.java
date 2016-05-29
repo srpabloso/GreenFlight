@@ -11,8 +11,6 @@ package GreenFlight.BO;
  */
 public class AeroportoBO {
 
-    protected String pablo;
-
     
 }
 
