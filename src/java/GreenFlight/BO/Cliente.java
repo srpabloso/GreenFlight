@@ -34,7 +34,7 @@ public class Cliente extends AbstractController {
     
     public String testMethod()
     {
-        return "Testado 123";
+        return "Testado 1234";
     
     }
     
